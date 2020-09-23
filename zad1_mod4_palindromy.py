@@ -15,3 +15,4 @@ def palindrom_check(word):
         return False
 print(palindrom_check(word=input().lower()))
 
+
