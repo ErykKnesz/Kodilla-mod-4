@@ -13,5 +13,5 @@ def palindrom_check(word):
         return True
     else:
         return False
-print(palindrom_check(word=str(input())))
+print(palindrom_check(word=input().lower()))
 
