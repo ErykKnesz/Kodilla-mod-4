@@ -1,4 +1,4 @@
-def palindrom_check(word=str(input())):
+def palindrom_check(word):
     '''Returns True if the input string spelled backwards is the same as spelled forwards,
     otherwise returns False:
     e.g attribute lol == True
