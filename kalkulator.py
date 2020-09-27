@@ -20,8 +20,8 @@ def kalkulator():
         prompt_1 = input("Podaj kolejną liczbę, albo wciśnij x, by zakończyć: ")
         if prompt_1 == 'x':
             break
-        if prompt_1 != 'x':
-            logging.info("Najpierw bliczam sumę dodatkowych liczb")
+        else:
+            logging.info("Najpierw obliczam sumę dodatkowych liczb")
             dodawanie = dodawanie + float(prompt_1)
     if dzialanie == 1:         
         logging.info("Dodaję %s i %s do sumy %s" %(num, num_2, dodawanie))        
@@ -35,7 +35,7 @@ def kalkulator():
         prompt_1 = input("Podaj kolejną liczbę, albo wciśnij x, by zakończyć: ")
         if prompt_1 == 'x':
             break
-        if prompt_1 != 'x':
+        else:
             logging.info("Najpierw mnożę dodatkowe liczby")
             mnozenie = mnozenie * float(prompt_1)
     if dzialanie == 3:        
