@@ -21,36 +21,28 @@ def prompt_control(num, message):
     return num
 
 def start_program(dzialanie):
-    num=None
-    dzialanie = input_value_control(num,"Podaj działanie, posługując się odpowiednią liczbą: \n 1 Dodawanie,\n 2 Odejmowanie,\n 3 Mnożenie,\n 4 Dzielenie: \n ")
+    dzialanie = input_value_control(None,"Podaj działanie, posługując się odpowiednią liczbą: \n 1 Dodawanie,\n 2 Odejmowanie,\n 3 Mnożenie,\n 4 Dzielenie: \n ")
     return dzialanie
 
 def users_inputs(num=False, num_2=False, num_3=False):
     if num == True:
-        num = None
-        num = input_value_control(num, "Podaj pierwszą liczbę: ")
+        num = input_value_control(None, "Podaj pierwszą liczbę: ")
         return num
     if num_2 == True:
-        num_2 = None
-        num_2 = input_value_control(num_2, "Podaj drugą liczbę: ")
+        num_2 = input_value_control(None, "Podaj drugą liczbę: ")
         return num_2
     if num_3 == True:
-        num_3 = None
-        num_3 = prompt_control(num_3,"Podaj kolejną liczbę, albo wciśnij x, by zakończyć: ")
+        num_3 = prompt_control(None,"Podaj kolejną liczbę, albo wciśnij x, by zakończyć: ")
         return num_3
         
 def kalkulator():
     dzialanie = start_program(dzialanie=None)
     
-    num = None
-    num_2 = None
-    num_3 = None
-
     if dzialanie <= 4:
         num = users_inputs(num=True)
         num_2 = users_inputs(num_2=True)
     else:
-        dzialanie = input_value_control(num,"Koniecznie podaj liczbę z zakresu 1-4 dla: 1 Dodawanie, 2 Odejmowanie, 3 Mnożenie, 4 Dzielenie: ")
+        dzialanie = input_value_control(None,"Koniecznie podaj liczbę z zakresu 1-4 dla: 1 Dodawanie, 2 Odejmowanie, 3 Mnożenie, 4 Dzielenie: ")
         num = users_inputs(num=True)
         num_2 = users_inputs(num_2=True)
 
