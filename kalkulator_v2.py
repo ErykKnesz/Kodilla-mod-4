@@ -8,7 +8,9 @@ def input_control(num, message):
             return float(text)
         except ValueError:
             pass
-        return num
+    return num
+
+def input_control2(num,message):
     while num is False:
         text = input(message)
         try:
@@ -16,13 +18,17 @@ def input_control(num, message):
         except ValueError:
             if text.lower() == 'x':
               return text
-        return num
+    return num
+
+def input_control3(num,message):
     while num is True:
         text = input(message)
-        if text in '1234':
-            return str(text)
-        else: 
-            return num  
+        try:
+            if text in '1234':
+                return str(text)
+        except ValueError: 
+            pass
+    return num  
 
 def get_data(operation):
 
@@ -31,7 +37,7 @@ def get_data(operation):
     others = []
     if operation in "12":
         while True:
-            c = input_control(False, "Podaj kolejną liczbę: ")
+            c = input_control2(False, "Podaj kolejną liczbę: ")
             if c == 'x':
                 break
             else:
@@ -71,7 +77,7 @@ operations = {
 }
 
 if __name__ == "__main__":
-    operation = input_control(True,"Podaj działanie, posługując się odpowiednią liczbą: \n 1 Dodawanie,\n 2 Mnożenie,\n 3 Odejmowanie,\n 4 Dzielenie: \n ")
+    operation = input_control3(True,"Podaj działanie, posługując się odpowiednią liczbą: \n 1 Dodawanie,\n 2 Mnożenie,\n 3 Odejmowanie,\n 4 Dzielenie: \n ")
     a, b, others = get_data(operation)
     result = operations[operation](a, b, *others)
     print(result)
