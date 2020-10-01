@@ -87,8 +87,8 @@ operations = {
 if __name__ == "__main__":
     operation = input_control3(
         True,
-        "Podaj działanie, posługując się odpowiednią liczbą:\n\
-         1 Dodawanie,\
+        "Podaj działanie, posługując się odpowiednią liczbą:\
+         \n 1 Dodawanie,\
          \n 2 Mnożenie,\
          \n 3 Odejmowanie,\
          \n 4 Dzielenie:\
