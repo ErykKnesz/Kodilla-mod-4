@@ -1,7 +1,7 @@
 word = "Do geese see God?"
 
 
-def palindrom_check(word):
+def palindrome_check(word):
     '''Returns True if the string in variable word
     spelled backwards is the same as spelled forwards,
     otherwise returns False:
@@ -25,4 +25,4 @@ def palindrom_check(word):
         return False
 
 
-print(palindrom_check(word))
+print(palindrome_check(word))
